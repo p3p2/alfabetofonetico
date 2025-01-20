@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aprende el Alfabeto Fonético Internacional y convierte texto a código ICAO de manera fácil y rápida.">
+    <meta name="keywords"
+        content="alfabeto fonético internacional, código ICAO, conversor de texto a código ICAO, phonetic alphabet">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="style.css">
+    <link id="favicon" rel="icon" href="https://github.com/p3p2/imagenes/blob/main/logo_javi.jpg?raw=true"
+        sizes="16x16">
+    <title>Alfabeto Fonético Internacional - Conversor de Texto a Código ICAO</title>
+    <link rel="canonical" href="https://www.tusitio.com/alfabeto-fonetico-internacional">
+</head>
+
+<body>
+    <header>
+        <h1>Alfabeto Fonético Internacional</h1>
+        <nav>
+            <ul>
+                <li><a id="enlaceTabla" href="#tabla">Tabla del Alfabeto</a></li>
+                <li><a href="#conversor">Conversor</a></li>
+                <li><a href="#resultado">Resultado código ICAO</a></li>
+                <li><a href="#fncionamiento">Funcionamiento de conversor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="table-container" id="tabla">
+            <li><a id="anclaTabla" href="#tabla">Tabla del Alfabeto</a></li>
+            <p class="texto-table font-20px">Alfabeto Fonético Internacional</p>
+            <div class="flex-table">
+                <div class="cell">A : Alfa</div>
+                <div class="cell">B: Bravo</div>
+                <div class="cell">C: Charlie</div>
+                <div class="cell">D: Delta</div>
+                <div class="cell">E: Echo</div>
+                <div class="cell">F: Foxtrot</div>
+                <div class="cell">G: Golf</div>
+                <div class="cell">H: Hotel</div>
+                <div class="cell">I: India</div>
+                <div class="cell">J: Juliett</div>
+                <div class="cell">K: Kilo</div>
+                <div class="cell">L: Lima</div>
+                <div class="cell">M: Mike</div>
+                <div class="cell">N: November</div>
+                <div class="cell">O: Oscar</div>
+                <div class="cell">P: Papa</div>
+                <div class="cell">Q: Quebec</div>
+                <div class="cell">R: Romeo</div>
+                <div class="cell">S: Sierra</div>
+                <div class="cell">T: Tango</div>
+                <div class="cell">U: Uniform</div>
+                <div class="cell">V: Victor</div>
+                <div class="cell">W: Whiskey</div>
+                <div class="cell">X: X-ray</div>
+                <div class="cell">Y: Yankee</div>
+                <div class="cell">Z: Zulu</div>
+            </div>
+        </section>
+
+        <section id="conversor">
+            <h2>Conversor de Texto a Alfabeto Fonético Internacional</h2>
+            
+            <label for="inputText"><p class="font-20px pointer">Escribe el texto a convertir.</p></label>
+            <div>
+                <textarea class="inline" id="inputText" placeholder="Escribe aquí" oninput="autoResize(this)" onkeydown="checkEnter(event)"></textarea>
+                <button onclick="translateToPhonetic()">Convertir</button>
+                <button onclick="resetFields()">Reiniciar</button>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="resultado" >Resultado en código ICAO</h2>
+            <p class="font-20px"><i>Aquí se muestra el resultado de la conversión a código <abbr title="International Civil Aeronautical Organization">ICAO</abbr>.</i></p>
+            <p class="output" id="output"><label for="inputText"><i class="pointer">Toca par empezar a escribir</i></label></p>
+        </section>
+            <section>
+                <h2 id="fncionamiento">Te explico cómo funciona</h2>
+                <i class="block">Ingresa tu texto donde pone: "Escribe aquí".</i>
+                <i class="block">Los caracteres con (*) no son convertibles.</i>
+                <i class="block">Cada palabra se muestra en una línea para mayor facilidad de lectura.</i>
+                <i class="block">Después de escribir el texto pulsa Enter o el botón convertir para ver el resultado.</i>
+            </section>
+    </main>
+
+    <footer class="footer">
+        <i class="creado">Creado por <a class="white" href="https://sites.google.com/view/cosasjavi/inicio" target="_blank" rel="noopener noreferrer">Javi</a></i>
+        <p>Ayuda con el Alfabeto Fonético Internacional.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
