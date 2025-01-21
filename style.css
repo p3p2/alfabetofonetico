@@ -98,6 +98,10 @@ button {
   display: inline;
 }
 
+.none {
+  display: none;
+}
+
 footer {
   margin-top: 40px;
   padding: 10px;
@@ -113,4 +117,8 @@ footer {
 
 .pointer {
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  
 }
