@@ -6,11 +6,13 @@ const phoneticAlphabet = {
   U: 'Uniform', V: 'Victor', W: 'Whiskey', X: 'X-ray', Y: 'Yankee', Z: 'Zulu'
 };
 
+const reset = document.getElementById('reset');
+
 
 function translateToPhonetic() {
   const input = document.getElementById('inputText').value.toUpperCase();
   let result = '';
-
+  reset.style.display = 'block';
   for (let char of input) {
       if (phoneticAlphabet[char]) {
           result += phoneticAlphabet[char] + ' / ';
@@ -28,6 +30,7 @@ function translateToPhonetic() {
 function resetFields() {
   document.getElementById('inputText').value  = '';
   document.getElementById('output').innerHTML = '<label for="inputText"><i class="pointer">Toca par empezar a escribir</i></label>';
+  reset.style.display = 'none';
 
 
   const textarea = document.getElementById('inputText');
@@ -45,5 +48,6 @@ function checkEnter(event) {
   if (event.key === 'Enter') {
       event.preventDefault();
       translateToPhonetic();
+      reset.style.display = 'block';
   }
 }
