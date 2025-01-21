@@ -119,6 +119,12 @@ footer {
   cursor: pointer;
 }
 
+.resultado {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
 @media (max-width: 600px) {
   
 }
