@@ -23,15 +23,14 @@
             <ul>
                 <li><a id="enlaceTabla" href="#tabla">Tabla del Alfabeto</a></li>
                 <li><a href="#conversor">Conversor</a></li>
-                <li><a href="#resultado">Resultado código ICAO</a></li>
                 <li><a href="#fncionamiento">Funcionamiento de conversor</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <main>
         <section class="table-container" id="tabla">
-
+            
             <p class="texto-table font-20px">Alfabeto Fonético Internacional</p>
             <div class="flex-table">
                 <div class="cell">A : Alfa</div>
@@ -62,16 +61,19 @@
                 <div class="cell">Z: Zulu</div>
             </div>
         </section>
-
+        
         <section id="conversor">
             <h2>Conversor de Texto a Alfabeto Fonético Internacional</h2>
-
+            
             <label for="inputText">
                 <p class="font-20px pointer">Escribe el texto a convertir.</p>
             </label>
-
+            
             <textarea class="inline" id="inputText" placeholder="Escribe aquí" oninput="autoResize(this)" onkeydown="checkEnter(event)"></textarea>
-            <button class="block" onclick="translateToPhonetic()">Convertir</button>
+            <p class="block">
+                <button onclick="translateToPhonetic()">Convertir</button>
+                <a class="resultado" href="#resultado">Ver resultado código ICAO</a>
+            </p>
             
         </section>
         
