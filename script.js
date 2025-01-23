@@ -16,7 +16,7 @@ function translateToPhonetic() {
   reset.style.display = 'block';
   resultado.style.display = 'inline';
   if (input === '') {
-    result = 'Toca Borrar Todo y luego Click aquí para empezar';
+    result = 'Toca Borrar Todo y luego clic aquí para empezar';
   } else {
     for (let char of input) {
       if (phoneticAlphabet[char]) {
