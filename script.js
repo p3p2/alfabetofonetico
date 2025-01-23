@@ -1,53 +1,64 @@
 const phoneticAlphabet = {
-  A: 'Alfa', B: 'Bravo', C: 'Charlie', D: 'Delta', E: 'Echo',
-  F: 'Foxtrot', G: 'Golf', H: 'Hotel', I: 'India', J: 'Juliett',
-  K: 'Kilo', L: 'Lima', M: 'Mike', N: 'November', O: 'Oscar',
-  P: 'Papa', Q: 'Quebec', R: 'Romeo', S: 'Sierra', T: 'Tango',
-  U: 'Uniform', V: 'Victor', W: 'Whiskey', X: 'X-ray', Y: 'Yankee', Z: 'Zulu'
+  A: 'Alfa', Á: 'Alfa', B: 'Bravo', C: 'Charlie', D: 'Delta', E: 'Echo', É: 'Echo',
+  F: 'Foxtrot', G: 'Golf', H: 'Hotel', I: 'India', Í: 'India', J: 'Juliett', K: 'Kilo',
+  L: 'Lima', M: 'Mike', N: 'November', O: 'Oscar', Ó: 'Oscar', P: 'Papa', Q: 'Quebec',
+  R: 'Romeo', S: 'Sierra', T: 'Tango', U: 'Uniform', Ú: 'Uniform', Ü: 'Uniform', V: 'Victor',
+  W: 'Whiskey', X: 'X-ray', Y: 'Yankee', Z: 'Zulu'
 };
 
 const reset = document.getElementById('reset');
-
+const resultado = document.getElementById('resultado');
+const salida = document.getElementById('output');
 
 function translateToPhonetic() {
   const input = document.getElementById('inputText').value.toUpperCase();
   let result = '';
   reset.style.display = 'block';
-  for (let char of input) {
+  resultado.style.display = 'inline';
+  if (input === '') {
+    result = 'Toca Borrar Todo y luego Click aquí para empezar';
+  } else {
+    for (let char of input) {
       if (phoneticAlphabet[char]) {
-          result += phoneticAlphabet[char] + ' / ';
-      }
-      else if (char === ' ') {
-          result += '\n';
+        result += phoneticAlphabet[char] + ' / ';
+      } else if (char === ' ') {
+          result += '\n - ';
       } else {
-          result += char + '*/ ';
+        result += char + '*/ ';
       }
+    }
   }
-
   document.getElementById('output').innerText = result.trim();
-}
+};
 
 function resetFields() {
   document.getElementById('inputText').value  = '';
   document.getElementById('output').innerHTML = '<label for="inputText"><i class="pointer">Toca par empezar a escribir</i></label>';
   reset.style.display = 'none';
-
+  resultado.style.display = 'none';
 
   const textarea = document.getElementById('inputText');
   textarea.style.width = '306px'; // Establece el ancho deseado
   textarea.style.height = '35px'; // Establece la altura deseada
-}
+  salida.style.backgroundColor = '';
+};
 
 
 function autoResize(textarea) {
   textarea.style.height = 'auto';
   textarea.style.height = textarea.scrollHeight + 'px';
-}
+};
 
 function checkEnter(event) {
   if (event.key === 'Enter') {
       event.preventDefault();
       translateToPhonetic();
       reset.style.display = 'block';
+      resultado.style.display = 'inline';
   }
-}
+};
+
+resultado.addEventListener('click', function(event) {
+  salida.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
+  salida.style.fontSize = '24px';
+});
