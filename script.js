@@ -33,9 +33,10 @@ function translateToPhonetic() {
 
 function resetFields() {
   document.getElementById('inputText').value  = '';
-  document.getElementById('output').innerHTML = '<label for="inputText"><i class="pointer">Toca par empezar a escribir</i></label>';
+  document.getElementById('output').innerHTML = '<label for="inputText"><i class="pointer">Clic aquí para empezar.</i></label>';
   reset.style.display = 'none';
   resultado.style.display = 'none';
+  salida.style.fontSize = '16px';
 
   const textarea = document.getElementById('inputText');
   textarea.style.width = '306px'; // Establece el ancho deseado
