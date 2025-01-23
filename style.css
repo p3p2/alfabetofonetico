@@ -85,6 +85,9 @@ button {
 
 .output {
   padding: 12px 60px 12px 60px;
+  border-top: 3px double gainsboro;
+  border-bottom: 3px double gainsboro;
+  border-radius: 20px;
 }
 
 .font-20px {
@@ -119,10 +122,25 @@ footer {
   cursor: pointer;
 }
 
-.resultado {
-  color: black;
-  text-align: center;
+.enlace-resultado {
   text-decoration: none;
+  outline: none;
+}
+
+.resultado {
+  display: none;
+}
+
+.resultado:focus {
+  outline: none;
+}
+
+.lo {
+  color: rgba(189, 187, 187, 0.774);
+}
+
+.margin-botton {
+  margin-bottom: 6px;
 }
 
 @media (max-width: 600px) {
