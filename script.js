@@ -12,6 +12,10 @@ const salida = document.getElementById('output');
 const cookies = document.getElementById('cookie-notice');
 const buttonCookies = document.getElementById('accept-cookies');
 const body = document.getElementById('body');
+const tabla = document.getElementById('enlace-tabla');
+const conversor = document.getElementById('enlace-conversor');
+const funcionamiento = document.getElementById('enlace-funcionamiento');
+
 
 function translateToPhonetic() {
   const input = document.getElementById('inputText').value.toUpperCase();
@@ -70,4 +74,26 @@ resultado.addEventListener('click', function() {
 buttonCookies.addEventListener('click', function() {
   cookies.style.display = 'none';
   body.style.marginTop = '0';
+});
+
+
+function scrollToElement(elementId) {
+  document.getElementById(elementId).scrollIntoView({ behavior: 'smooth' });
+}
+
+
+resultado.addEventListener('click', function() {
+  scrollToElement('output');
+});
+
+tabla.addEventListener('click', function() {
+  scrollToElement('tabla');
+});
+
+conversor.addEventListener('click', function() {
+  scrollToElement('conversor');
+});
+
+funcionamiento.addEventListener('click', function() {
+  scrollToElement('funcionamiento');
 });
