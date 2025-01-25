@@ -9,6 +9,7 @@
     <meta name="keywords"
         content="alfabeto fonético internacional, código ICAO, conversor de texto a código ICAO, phonetic alphabet">
     <meta name="robots" content="index, follow">
+    <!-- <meta http-equiv="refresh" content="5"> -->
     <link rel="stylesheet" href="style.css">
     <link id="favicon" rel="icon" href="https://github.com/p3p2/imagenes/blob/main/logo_javi.jpg?raw=true"
         sizes="16x16">
@@ -16,7 +17,8 @@
     <link rel="canonical" href="https://www.tusitio.com/alfabeto-fonetico-internacional">
 </head>
 
-<body>
+<body id="body">
+
     <header>
         <h1>Alfabeto Fonético Internacional</h1>
         <nav>
@@ -80,13 +82,13 @@
         </section>
         
         <section>
-            <h2 id="resultado" title="FAQ">Resultado en código ICAO</h2>
+            <h2 id="resultado">Resultado en código ICAO</h2>
             <p class="font-20px"><i>Aquí se muestra el resultado de la conversión a código <abbr title="International Civil Aeronautical Organization">ICAO</abbr>.</i></p>
             <p class="output" id="output"><label for="inputText"><i class="pointer">Clic aquí para empezar.</i></label></p>
             <button id="reset" class="none" onclick="resetFields()">Reiniciar</button>
         </section>
         <section>
-            <h2 id="fncionamiento">Te explico cómo funciona</h2>
+            <h2 id="fncionamiento" title="FAQ">Te explico cómo funciona</h2>
             <i class="block margin-botton">Ingresa tu texto donde pone: "Escribe aquí".</i>
             <i class="block margin-botton">Después de escribir el texto pulsa Enter o el botón convertir para ver el resultado.</i>
             <i class="block margin-botton">El botón "ver resultado" sirve para verlo mejor.</i>
@@ -95,6 +97,12 @@
             <i class="block margin-botton">El guion determina donde empieza una palabra nueva.</i>
         </section>
     </main>
+    
+    <section title="Aviso de cookies">
+        <div class="cookies" id="cookie-notice">
+            <p>Este sitio web no utiliza cookies. Si eso cambia, te informare adecuadamente.<button id="accept-cookies">Aceptar</button></p>
+        </div>
+    </section>
 
     <footer class="footer">
         <i class="creado">Creado por <a class="white" href="https://sites.google.com/view/cosasjavi/inicio"
@@ -102,7 +110,9 @@
         <p>Ayuda con el Alfabeto Fonético Internacional.</p>
     </footer>
 
+    
     <script src="script.js"></script>
 </body>
+
 
 </html>
