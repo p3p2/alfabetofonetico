@@ -8,7 +8,10 @@ const phoneticAlphabet = {
 
 const reset = document.getElementById('reset');
 const resultado = document.getElementById('resultado');
-const salida = document.getElementById('output');
+const salida = document.getElementById('output');''
+const cookies = document.getElementById('cookie-notice');''
+const buttonCookies = document.getElementById('accept-cookies');''
+const body = document.getElementById('body');''
 
 function translateToPhonetic() {
   const input = document.getElementById('inputText').value.toUpperCase();
@@ -59,7 +62,12 @@ function checkEnter(event) {
   }
 };
 
-resultado.addEventListener('click', function(event) {
+resultado.addEventListener('click', function() {
   salida.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
   salida.style.fontSize = '24px';
+});
+
+buttonCookies.addEventListener('click', function() {
+  cookies.style.display = 'none';
+  body.style.marginTop = '0';
 });
