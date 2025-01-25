@@ -11,7 +11,7 @@
     <meta name="robots" content="index, follow">
     <!-- <meta http-equiv="refresh" content="5"> -->
     <link rel="stylesheet" href="style.css">
-    <link id="favicon" rel="icon" href="https://github.com/p3p2/imagenes/blob/main/logo_javi.jpg?raw=true"
+    <link id="favicon" rel="icon" href="https://github.com/p3p2/imagenes/blob/main/logo_javi.jpg"
         sizes="16x16">
     <title>Alfabeto Fonético Internacional - Conversor de Texto a Código ICAO</title>
     <link rel="canonical" href="https://www.tusitio.com/alfabeto-fonetico-internacional">
@@ -23,9 +23,9 @@
         <h1>Alfabeto Fonético Internacional</h1>
         <nav>
             <ul>
-                <li><a id="enlaceTabla" href="#tabla">Tabla del Alfabeto</a></li>
-                <li><a href="#conversor">Conversor</a></li>
-                <li><a href="#fncionamiento">Funcionamiento de conversor</a></li>
+                <li><a id="enlace-tabla">Tabla del Alfabeto</a></li>
+                <li><a id="enlace-conversor">Conversor</a></li>
+                <li><a id="enlace-funcionamiento">Funcionamiento de conversor</a></li>
             </ul>
         </nav>
     </header>
@@ -74,7 +74,7 @@
             <textarea class="inline" id="inputText" placeholder="Escribe aquí" oninput="autoResize(this)" onkeydown="checkEnter(event)"></textarea>
             <p class="block">
                 <button onclick="translateToPhonetic()">Convertir</button>
-                <a class="enlace-resultado" href="#resultado">
+                <a class="enlace-resultado">
                     <button class="resultado" id="resultado">Ver resultado</button>
                 </a>
             </p>
@@ -88,7 +88,7 @@
             <button id="reset" class="none" onclick="resetFields()">Reiniciar</button>
         </section>
         <section>
-            <h2 id="fncionamiento" title="FAQ">Te explico cómo funciona</h2>
+            <h2 id="funcionamiento" title="FAQ">Te explico cómo funciona</h2>
             <i class="block margin-botton">Ingresa tu texto donde pone: "Escribe aquí".</i>
             <i class="block margin-botton">Después de escribir el texto pulsa Enter o el botón convertir para ver el resultado.</i>
             <i class="block margin-botton">El botón "ver resultado" sirve para verlo mejor.</i>
@@ -100,7 +100,7 @@
     
     <section title="Aviso de cookies">
         <div class="cookies" id="cookie-notice">
-            <p>Este sitio web no utiliza cookies. Si eso cambia, te informare adecuadamente.<button id="accept-cookies">Aceptar</button></p>
+            <p>Este sitio web no utiliza cookies. Si eso cambia, te informare adecuadamente.<button id="accept-cookies">X Cerrar</button></p>
         </div>
     </section>
 
