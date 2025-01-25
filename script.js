@@ -1,73 +1,172 @@
-const phoneticAlphabet = {
-  A: 'Alfa', Á: 'Alfa', B: 'Bravo', C: 'Charlie', D: 'Delta', E: 'Echo', É: 'Echo',
-  F: 'Foxtrot', G: 'Golf', H: 'Hotel', I: 'India', Í: 'India', J: 'Juliett', K: 'Kilo',
-  L: 'Lima', M: 'Mike', N: 'November', O: 'Oscar', Ó: 'Oscar', P: 'Papa', Q: 'Quebec',
-  R: 'Romeo', S: 'Sierra', T: 'Tango', U: 'Uniform', Ú: 'Uniform', Ü: 'Uniform', V: 'Victor',
-  W: 'Whiskey', X: 'X-ray', Y: 'Yankee', Z: 'Zulu'
-};
+body {
+  margin-top: 40px;
+  padding: 6px;
+}
 
-const reset = document.getElementById('reset');
-const resultado = document.getElementById('resultado');
-const salida = document.getElementById('output');''
-const cookies = document.getElementById('cookie-notice');''
-const buttonCookies = document.getElementById('accept-cookies');''
-const body = document.getElementById('body');''
+nav {
+  margin-bottom: 40px;
+}
 
-function translateToPhonetic() {
-  const input = document.getElementById('inputText').value.toUpperCase();
-  let result = '';
-  reset.style.display = 'block';
-  resultado.style.display = 'inline';
-  if (input === '') {
-    result = 'Toca reiniciar y escribe algo';
-  } else {
-    for (let char of input) {
-      if (phoneticAlphabet[char]) {
-        result += phoneticAlphabet[char] + ' / ';
-      } else if (char === ' ') {
-          result += '\n - ';
-      } else {
-        result += char + '*/ ';
-      }
-    }
-  }
-  document.getElementById('output').innerText = result.trim();
-};
+section {
+  margin-bottom: 40px;
+}
 
-function resetFields() {
-  document.getElementById('inputText').value  = '';
-  document.getElementById('output').innerHTML = '<label for="inputText"><i class="pointer">Clic aquí para empezar.</i></label>';
-  reset.style.display = 'none';
-  resultado.style.display = 'none';
-  salida.style.fontSize = '16px';
+ul {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #333; */
+}
 
-  const textarea = document.getElementById('inputText');
-  textarea.style.width = '306px'; // Establece el ancho deseado
-  textarea.style.height = '35px'; // Establece la altura deseada
-  salida.style.backgroundColor = '';
-};
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
 
 
-function autoResize(textarea) {
-  textarea.style.height = 'auto';
-  textarea.style.height = textarea.scrollHeight + 'px';
-};
 
-function checkEnter(event) {
-  if (event.key === 'Enter') {
-      event.preventDefault();
-      translateToPhonetic();
-      reset.style.display = 'block';
-      resultado.style.display = 'inline';
-  }
-};
+.table-container {
+  text-align: center;
+  padding: 10px;
+  overflow: hidden;
+  border-top: 3px double gainsboro;
+  border-bottom: 3px double gainsboro;
+  border-radius: 20px;
+}
 
-resultado.addEventListener('click', function() {
-  salida.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
-  salida.style.fontSize = '24px';
-});
+.texto-table {
+  text-decoration: underline;
+  text-decoration-style: dotted; /* Estilo del subrayado */
+  text-underline-offset: 6px; /* Distancia del subrayado */
+}
 
-buttonCookies.addEventListener('click', function() {
-  cookies.style.display = 'none';
-  body.style.marginTop = '0';
-});
+.flex-table {
+  padding-left: 10px;
+  float: left;
+  padding-bottom: 20px;
+}
+
+.cell {
+  font-size: 16px;
+  padding: 3px 10px 3px 10px;
+  border: 1px solid #000;
+  margin: 2px 4px 2px 0;
+  text-align: center;
+  float: left;
+}
+
+textarea {
+  cursor: pointer;
+  width: 306px;
+  height: 35px;
+  overflow: hidden;
+  resize: none;
+}
+
+textarea::placeholder {
+  font-size: 20px;
+}
+
+button {
+  font-size: 16px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.output {
+  padding: 12px 60px 12px 60px;
+  border-top: 3px double gainsboro;
+  border-bottom: 3px double gainsboro;
+  border-radius: 20px;
+}
+
+.font-20px {
+  font-size: 20px;
+}
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.none {
+  display: none;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 10px;
+  overflow: hidden;
+  border-top: 3px double gainsboro;
+  border-bottom: 3px double gainsboro;
+  border-radius: 20px;
+}
+
+.creado {
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.enlace-resultado {
+  text-decoration: none;
+  outline: none;
+}
+
+.resultado {
+  display: none;
+}
+
+.resultado:focus {
+  outline: none;
+}
+
+.lo {
+  color: rgba(189, 187, 187, 0.774);
+}
+
+.margin-botton {
+  margin-bottom: 6px;
+}
+
+.cookies {
+  text-align: center;
+  background-color: rgba(189, 187, 187, 0.774);;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  margin-left: -15px;
+}
+
+.cookies p {
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+.cookies button {
+  margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+  
+}
