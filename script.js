@@ -46,8 +46,8 @@ function resetFields() {
   salida.style.fontSize = '16px';
 
   const textarea = document.getElementById('inputText');
-  textarea.style.width = '306px'; // Establece el ancho deseado
-  textarea.style.height = '35px'; // Establece la altura deseada
+  textarea.style.width = '306px';
+  textarea.style.height = '35px';
   salida.style.backgroundColor = '';
 };
 
@@ -97,3 +97,16 @@ conversor.addEventListener('click', function() {
 funcionamiento.addEventListener('click', function() {
   scrollToElement('funcionamiento');
 });
+
+window.onscroll = function() {
+  const button = document.getElementById("arriba");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      button.style.display = "block";
+  } else {
+      button.style.display = "none";
+  }
+};
+
+document.getElementById("arriba").onclick = function(event) {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+};
