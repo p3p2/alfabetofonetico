@@ -22,6 +22,7 @@ function translateToPhonetic() {
   let result = '';
   reset.style.display = 'block';
   resultado.style.display = 'inline';
+  salida.style.cursor = 'default';
   if (input === '') {
     result = 'Toca reiniciar y escribe algo';
   } else {
