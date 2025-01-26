@@ -46,8 +46,8 @@ function resetFields() {
   salida.style.fontSize = '16px';
 
   const textarea = document.getElementById('inputText');
-  textarea.style.width = '306px';
-  textarea.style.height = '35px';
+  textarea.style.width = '306px'; // Establece el ancho deseado
+  textarea.style.height = '35px'; // Establece la altura deseada
   salida.style.backgroundColor = '';
 };
 
@@ -98,6 +98,7 @@ funcionamiento.addEventListener('click', function() {
   scrollToElement('funcionamiento');
 });
 
+// Mostrar el botón al desplazarse hacia abajo
 window.onscroll = function() {
   const button = document.getElementById("arriba");
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -107,6 +108,8 @@ window.onscroll = function() {
   }
 };
 
+// Desplazar hacia arriba al hacer clic en el botón
 document.getElementById("arriba").onclick = function(event) {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  // event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+  window.scrollTo({top: 0, behavior: 'smooth'}); // Desplazamiento suave
 };

@@ -185,3 +185,9 @@ footer {
 .acortar {
   width: 90%;
 }
+
+.desarrollador {
+  display: block;
+  color: black;
+  text-decoration: none; 
+}
