@@ -13,8 +13,11 @@ const cookies = document.getElementById('cookie-notice');
 const buttonCookies = document.getElementById('accept-cookies');
 const body = document.getElementById('body');
 const tabla = document.getElementById('enlace-tabla');
+const finTabla = document.getElementById('tabla');
 const conversor = document.getElementById('enlace-conversor');
+const finConversor = document.getElementById('conversor');
 const funcionamiento = document.getElementById('enlace-funcionamiento');
+const finFuncionamiento = document.getElementById('funcionamiento');
 
 
 function translateToPhonetic() {
@@ -89,14 +92,26 @@ resultado.addEventListener('click', function() {
 
 tabla.addEventListener('click', function() {
   scrollToElement('tabla');
+  finTabla.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
+  setTimeout(function() {
+    finTabla.style.backgroundColor = ''; // O el color original que desees
+  }, 6000);
 });
 
 conversor.addEventListener('click', function() {
   scrollToElement('conversor');
+  finConversor.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
+  setTimeout(function() {
+    finConversor.style.backgroundColor = ''; // O el color original que desees
+  }, 6000);
 });
 
 funcionamiento.addEventListener('click', function() {
   scrollToElement('funcionamiento');
+  finFuncionamiento.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
+  setTimeout(function() {
+    finFuncionamiento.style.backgroundColor = ''; // O el color original que desees
+  }, 6000);
 });
 
 // Mostrar el botón al desplazarse hacia abajo
