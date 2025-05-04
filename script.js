@@ -19,6 +19,11 @@ const finConversor = document.getElementById('conversor');
 const funcionamiento = document.getElementById('enlace-funcionamiento');
 const finFuncionamiento = document.getElementById('funcionamiento');
 
+const enlaceTabla = document.getElementById('enlace-tabla');
+  enlaceTabla.addEventListener('click', function(event) {
+    event.preventDefault(); 
+  });
+
 
 function translateToPhonetic() {
   const input = document.getElementById('inputText').value.toUpperCase();
@@ -50,8 +55,8 @@ function resetFields() {
   salida.style.fontSize = '16px';
 
   const textarea = document.getElementById('inputText');
-  textarea.style.width = '306px'; // Establece el ancho deseado
-  textarea.style.height = '35px'; // Establece la altura deseada
+  textarea.style.width = '306px'; 
+  textarea.style.height = '35px'; 
   salida.style.backgroundColor = '';
 };
 
@@ -94,27 +99,27 @@ tabla.addEventListener('click', function() {
   scrollToElement('tabla');
   finTabla.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
   setTimeout(function() {
-    finTabla.style.backgroundColor = ''; // O el color original que desees
-  }, 6000);
+    finTabla.style.backgroundColor = '';
+  }, 5000);
 });
 
 conversor.addEventListener('click', function() {
   scrollToElement('conversor');
   finConversor.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
   setTimeout(function() {
-    finConversor.style.backgroundColor = ''; // O el color original que desees
-  }, 6000);
+    finConversor.style.backgroundColor = '';
+  }, 5000);
 });
 
 funcionamiento.addEventListener('click', function() {
   scrollToElement('funcionamiento');
   finFuncionamiento.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
   setTimeout(function() {
-    finFuncionamiento.style.backgroundColor = ''; // O el color original que desees
-  }, 6000);
+    finFuncionamiento.style.backgroundColor = '';
+  }, 5000);
 });
 
-// Mostrar el botón al desplazarse hacia abajo
+
 window.onscroll = function() {
   const button = document.getElementById("arriba");
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -124,8 +129,7 @@ window.onscroll = function() {
   }
 };
 
-// Desplazar hacia arriba al hacer clic en el botón
+
 document.getElementById("arriba").onclick = function(event) {
-  // event.preventDefault(); // Evitar el comportamiento por defecto del enlace
-  window.scrollTo({top: 0, behavior: 'smooth'}); // Desplazamiento suave
+  window.scrollTo({top: 0, behavior: 'smooth'});
 };

@@ -6,34 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Aprende el Alfabeto Fonético Internacional y convierte texto a código ICAO de manera fácil y rápida.">
-    <meta name="keywords" content="alfabeto fonético internacional, código ICAO, conversor de texto a código ICAO, phonetic alphabet">
+    <meta name="keywords"
+        content="alfabeto fonético internacional, código ICAO, conversor de texto a código ICAO, phonetic alphabet">
     <meta name="robots" content="index, follow">
-    
-    <meta http-equiv="refresh" content="">
-    <link rel="stylesheet" href="style.css">
-    <link id="favicon" rel="icon" href="https://github.com/p3p2/imagenes/blob/main/logo_javi.jpg" sizes="16x16">
+    <link rel="stylesheet" href="style-copia.css">
+    <link id="favicon" rel="icon" href="https://raw.githubusercontent.com/p3p2/imagenes/refs/heads/main/favicon.ico" sizes="16x16">
     <title>Alfabeto Fonético Internacional - Conversor de Texto a Código ICAO</title>
     <link rel="canonical" href="https://www.tusitio.com/alfabeto-fonetico-internacional">
 </head>
 
 <body id="body">
-
     <header>
         <h1>Alfabeto Fonético Internacional</h1>
-        <h2>Alfabeto Fonético Internacional</h2>
-        <h3>Accesos a contenido</h3>
         <nav>
-            <ul>
-                <li class="pointer boton" id="enlace-tabla">Tabla del Alfabeto</li>
-                <li class="pointer boton" id="enlace-conversor">Conversor</li>
-                <li class="pointer boton" id="enlace-funcionamiento">Cómo funciona</li>
-            </ul>
+            <a href="#" class=" nav-link uno sombra" id="enlace-tabla">Tabla del Alfabeto</a>
+            <a href="#" class="nav-link dos sombra" id="enlace-conversor">Conversor</a>
+            <a href="#" class="nav-link tres sombra" id="enlace-funcionamiento">Cómo funciona</a>
         </nav>
     </header>
-    
     <main>
         <section class="table-container">
-            
             <p id="tabla" class="texto-table font-20px">Alfabeto Fonético Internacional</p>
             <div class="flex-table">
                 <div class="cell">A : Alfa</div>
@@ -64,57 +56,55 @@
                 <div class="cell">Z: Zulu</div>
             </div>
         </section>
-        
         <section>
             <h2 id="conversor">Conversor de Texto a Alfabeto Fonético Internacional</h2>
-            
             <label for="inputText">
                 <p class="font-20px pointer">Escribe el texto a convertir.</p>
             </label>
-            
-            <textarea class="inline" id="inputText" placeholder="Escribe aquí" oninput="autoResize(this)" onkeydown="checkEnter(event)"></textarea>
+            <textarea class="inline" id="inputText" placeholder="Escribe aquí" oninput="autoResize(this)"
+                onkeydown="checkEnter(event)"></textarea>
             <p class="block">
                 <button onclick="translateToPhonetic()">Convertir</button>
                 <a class="enlace-resultado">
-                    <button class="resultado" id="resultado">Ver resultado</button>
+                    <button class="resultado" id="resultado">Ver el resultado</button>
                 </a>
             </p>
-            
         </section>
-        
         <section>
             <h2 id="resultado">Resultado en código ICAO</h2>
-            <p class="font-20px acortar"><i>Aquí se muestra el resultado de la conversión a código <abbr title="International Civil Aeronautical Organization">ICAO</abbr>.</i></p>
-            <p class="output pointer" id="output"><label for="inputText"><i class="pointer">Clic aquí para empezar.</i></label></p>
+            <p class="font-20px acortar"><i>Aquí se muestra el resultado de la conversión a código <abbr
+                        title="International Civil Aeronautical Organization">ICAO</abbr>.</i></p>
+            <p class="output pointer" id="output"><label for="inputText"><i class="pointer">Clic aquí para
+                        empezar.</i></label></p>
             <button id="reset" class="none" onclick="resetFields()">Reiniciar</button>
         </section>
         <section class="acortar">
             <h2 id="funcionamiento" title="FAQ">Te explico cómo funciona</h2>
             <i class="block margin-botton">Ingresa tu texto donde pone: "Escribe aquí".</i>
-            <i class="block margin-botton">Después de escribir el texto pulsa Enter o el botón convertir para ver el resultado.</i>
-            <i class="block margin-botton">El botón "ver resultado" sirve para verlo mejor.</i>
+            <i class="block margin-botton">Después de escribir el texto pulsa Enter o el botón convertir para ver el
+                resultado.</i>
+            <i class="block margin-botton">El botón "ver el resultado" sirve para verlo mejor.</i>
             <i class="block margin-botton">Los caracteres con (*) no son convertibles.</i>
-            <i class="block margin-botton">Cada palabra se muestra en una línea para mayor facilidad de lectura.</i>
+            <i class="block margin-botton">El guion representa donde empieza una palabra nueva.</i>
             <i class="block margin-botton">El guion determina donde empieza una palabra nueva.</i>
         </section>
     </main>
-    
     <section title="Aviso de cookies">
         <div class="cookies" id="cookie-notice">
-            <p>Este sitio web no utiliza cookies. Si eso cambia, te informare adecuadamente.<button id="accept-cookies">X Cerrar</button></p>
+            <p>Este sitio web no utiliza cookies. Si eso cambia, te informare adecuadamente.<button
+                    id="accept-cookies">X Cerrar</button></p>
         </div>
     </section>
-
     <i class="pointer" id="arriba">Volver Arriba</i>
-
-    <footer class="footer">
+    <footer class="mifooter">
+        <h2>Proposito de la web</h2>
         <p>Ayuda con el Alfabeto Fonético Internacional.</p>
-        <a class="desarrollador" target="_blank" href="https://sites.google.com/view/cosasjavi/inicio" title="Ver trabajos de JAVI"><p>Creado por: <strong class="javi boton">JAVI</strong></p></a>
+        <a class="desarrollador" target="_blank" href="https://sites.google.com/view/cosasjavi/inicio"
+            title="Ver trabajos de JAVI">
+            <p>Creador : <strong class="javi botom">JAVI</strong></p>
+        </a>
     </footer>
-
-    
-    <script src="script.js"></script>
+    <script src="script-copia.js"></script>
 </body>
-
 
 </html>

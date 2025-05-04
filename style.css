@@ -1,21 +1,60 @@
 body {
-  margin-top: 40px;
+  margin-top: 50px;
   padding: 16px;
   width:  89%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  color: aquamarine;
+  background-color: #223;
+  padding: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 28px;
 }
 
 nav {
   margin-bottom: 40px;
 }
 
+
+
+ul {
+  display: inline-block;
+}
+
+.sombra {
+  display: inline-block;
+  padding: 12px;
+  border-radius: 5px;
+  color: whitesmoke;  
+  margin: 12px;
+  animation: back-a 4s infinite reverse;
+}
+
+.uno {
+  text-decoration-color: rgb(173, 30, 198);
+}
+.dos {
+  text-decoration-color: rgb(0, 208, 133);
+}
+.tres {
+  text-decoration-color: rgb(222, 147, 8);
+}
+
 .boton {
     margin: 2px;
-    padding: 10px 20px; /* Espaciado interno para simular un botón */
-    background-color: #efefef; /* Color de fondo del botón */
-    text-align: center; /* Centra el texto dentro del botón */
+    padding: 10px 20px;
+    background-color: #efefef;
+    text-align: center; 
     border-radius: 5px;
-    border: 1px solid #000; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño de fuente */
+    border: 1px solid #000;
+    font-size: 16px;
 }
 
 section {
@@ -34,23 +73,9 @@ li {
   float: left;
 }
 
-li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  color: rgba(0, 0, 0, 0.6);
-  text-decoration: underline;
-  text-underline-offset: 6px;
-}
-
-
 
 .table-container {
+  margin-top: 24px;
   text-align: center;
   padding: 10px;
   overflow: hidden;
@@ -124,18 +149,6 @@ button {
   display: none;
 }
 
-footer {
-  margin-top: 40px;
-  padding: 10px;
-  overflow: hidden;
-  border-top: 3px double gainsboro;
-  border-bottom: 3px double gainsboro;
-  border-radius: 20px;
-}
-
-.creado {
-  text-align: center;
-}
 
 .pointer {
   cursor: pointer;
@@ -200,18 +213,93 @@ footer {
   width: 90%;
 }
 
+
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 10px;
+  overflow: hidden;
+  border-top: 3px double gainsboro;
+  border-bottom: 3px double gainsboro;
+  border-radius: 20px;
+}
+
+.mifooter {
+  background-color: inherit;
+  position: relative;
+}
+
 .desarrollador {
-  display: block;
+  display: inline;
+  position: absolute;
+  right: 10px;
+  bottom: 0;
   color: black;
   text-decoration: none; 
 }
 
 .javi {
-  text-decoration-line: underline;
+  text-decoration: underline;
   text-decoration-color: gray;
   padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 7px;
 }
 
 .javi:hover {
-  border: 2px solid transparent;
+  color: green;
+  background-color: transparent;
+  border: 1px solid transparent;
+  opacity: 0.8;
+}
+
+.botom {
+  margin: 2px;
+  padding: 1px 10px;
+  background-color: #efefef;
+  border-radius: 5px;
+  border: 1px solid #000;
+  font-size: 16px; 
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 540px){
+  h1 {
+    font-size: 24px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 390px){
+  h1 {
+    font-size: 20px;
+  }
+}
+
+
+
+@keyframes back-a {
+  0% {
+    box-shadow: 1px 1px 5px rgb(161, 161, 221);
+  }
+  50% {
+    box-shadow: 1px 1px 5px rgb(161, 161, 221, 0.3);
+    color: white;
+  }
+  100% {
+    box-shadow: 1px 1px 5px rgb(161, 161, 221);
+  }
 }
