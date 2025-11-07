@@ -88,7 +88,7 @@ buttonCookies.addEventListener('click', function() {
 
 function scrollToElement(elementId) {
   document.getElementById(elementId).scrollIntoView({ behavior: 'smooth' });
-}
+};
 
 
 resultado.addEventListener('click', function() {
@@ -96,7 +96,6 @@ resultado.addEventListener('click', function() {
 });
 
 tabla.addEventListener('click', function() {
-  scrollToElement('tabla');
   finTabla.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
   setTimeout(function() {
     finTabla.style.backgroundColor = '';
@@ -104,7 +103,6 @@ tabla.addEventListener('click', function() {
 });
 
 conversor.addEventListener('click', function() {
-  scrollToElement('conversor');
   finConversor.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
   setTimeout(function() {
     finConversor.style.backgroundColor = '';
@@ -112,7 +110,6 @@ conversor.addEventListener('click', function() {
 });
 
 funcionamiento.addEventListener('click', function() {
-  scrollToElement('funcionamiento');
   finFuncionamiento.style.backgroundColor = 'rgba(189, 187, 187, 0.774)';
   setTimeout(function() {
     finFuncionamiento.style.backgroundColor = '';
