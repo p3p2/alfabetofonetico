@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Aprende el Alfabeto Fonético Internacional y convierte texto a código ICAO de manera fácil y rápida.">
+        content="Aprende el Alfabeto Fonético ICAO y convierte texto a código ICAO de manera fácil y rápida.">
     <meta name="keywords"
-        content="alfabeto fonético internacional, código ICAO, conversor de texto a código ICAO, phonetic alphabet">
+        content="alfabeto fonético internacional, código ICAO, conversor de texto a código ICAO, ICAO phonetic alphabet">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="style.css">
     <link id="favicon" rel="icon" href="https://raw.githubusercontent.com/p3p2/imagenes/refs/heads/main/favicon.ico" sizes="16x16">
@@ -17,11 +17,11 @@
 
 <body id="body">
     <header>
-        <h1>Alfabeto Fonético Internacional</h1>
+        <h1>Alfabeto Fonético ICAO</h1>
         <nav>
-            <a href="#" class=" nav-link uno sombra" id="enlace-tabla">Tabla del Alfabeto</a>
-            <a href="" class="nav-link dos sombra" id="enlace-conversor">Conversor</a>
-            <a href="" class="nav-link tres sombra" id="enlace-funcionamiento">Cómo funciona</a>
+            <a href="#tabla" class=" nav-link uno sombra" id="enlace-tabla">Tabla del Alfabeto</a>
+            <a href="#conversor" class="nav-link dos sombra" id="enlace-conversor">Conversor</a>
+            <a href="#funcionamiento" class="nav-link tres sombra" id="enlace-funcionamiento">Cómo funciona</a>
         </nav>
     </header>
     <main>
@@ -57,7 +57,7 @@
             </div>
         </section>
         <section>
-            <h2 id="conversor">Conversor de Texto a Alfabeto Fonético Internacional</h2>
+            <h2 id="conversor">Conversor de Texto</h2>
             <label for="inputText">
                 <p class="font-20px pointer">Escribe el texto a convertir.</p>
             </label>
@@ -71,18 +71,15 @@
             </p>
         </section>
         <section>
-            <h2 id="resultado">Resultado en código ICAO</h2>
-            <p class="font-20px acortar"><i>Aquí se muestra el resultado de la conversión a código <abbr
-                        title="International Civil Aeronautical Organization">ICAO</abbr>.</i></p>
-            <p class="output pointer" id="output"><label for="inputText"><i class="pointer">Clic aquí para
-                        empezar.</i></label></p>
+            <h2 id="ver-resultado">Resultado en código ICAO</h2>
+            <p class="font-20px acortar"><i>Aquí se muestra el resultado de la conversión <abbr title="International Civil Aeronautical Organization">ICAO</abbr>.</i></p>
+            <p class="output pointer" id="output"><label for="inputText"><i class="pointer">Clic aquí para empezar.</i></label></p>
             <button id="reset" class="none" onclick="resetFields()">Reiniciar</button>
         </section>
         <section class="acortar">
             <h2 id="funcionamiento" title="FAQ">Te explico cómo funciona</h2>
             <i class="block margin-botton">Ingresa tu texto donde pone: "Escribe aquí".</i>
-            <i class="block margin-botton">Después de escribir el texto pulsa Enter o el botón convertir para ver el
-                resultado.</i>
+            <i class="block margin-botton">Después de escribir el texto pulsa Enter o el botón convertir para ver el resultado.</i>
             <i class="block margin-botton">El botón "ver el resultado" sirve para verlo mejor.</i>
             <i class="block margin-botton">Los caracteres con (*) no son convertibles.</i>
             <i class="block margin-botton">El guion representa donde empieza una palabra nueva.</i>
@@ -91,8 +88,7 @@
     </main>
     <section title="Aviso de cookies">
         <div class="cookies" id="cookie-notice">
-            <p>Este sitio web no utiliza cookies. Si eso cambia, te informare adecuadamente.<button
-                    id="accept-cookies">X Cerrar</button></p>
+            <p>Este sitio web no utiliza cookies. Si eso cambia, te informare adecuadamente.<button id="accept-cookies">X Cerrar</button></p>
         </div>
     </section>
     <i class="pointer" id="arriba">Volver Arriba</i>
